@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             toggle.addEventListener("click", function () {
                 const isOpen = menu.classList.toggle("nav-open");
                 toggle.setAttribute("aria-expanded", isOpen);
-                toggle.textContent = isOpen ? "\u2715" : "\u2261";
+                toggle.textContent = isOpen ? "\u2715" : "\u2630";
             });
 
             // Close menu when a link is clicked
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.addEventListener("click", () => {
                     menu.classList.remove("nav-open");
                     toggle.setAttribute("aria-expanded", false);
-                    toggle.textContent = "\u2261";
+                    toggle.textContent = "\u2630";
                 });
             });
         })
