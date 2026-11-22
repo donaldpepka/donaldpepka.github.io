@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donald Pepka</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/nav.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        main.main--gallery {
+            max-width: 1200px;
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+        
+        /* Grid of album tiles, same idea as the gallery grid */
+        .albums {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        /* Each tile is a link: reset the link styling from main.css */
+        .album {
+            display: block;
+            color: #eeeee4;
+            text-decoration: none;
+        }
+
+        .album img {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            max-width: none;          /* cancels "img { max-width: 70% }" from main.css */
+            object-fit: cover;
+            display: block;
+        }
+
+        .album span {
+            display: block;
+            padding: 8px 0;
+        }
+
+        /* Subtle hover feedback so people know it's clickable */
+        .album:hover img {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+<div id="navbar-container"></div>
+
+<main class="main--gallery">
+    <h2>Photography</h2>
+
+    <div class="albums">
+        <!-- One <a> per gallery. You write: the link target, the folder, the title.
+             albums.js fills in the cover image. -->
+        <a class="album" href="gallery_07_2026.html"
+           data-folder="assets/photos/gallery_07_2026">
+            <img alt="">
+            <span>February–July, 2026</span>
+        </a>
+
+        <a class="album" href="gallery_12_2025.html"
+           data-folder="assets/photos/gallery_12_2025">
+            <img alt="">
+            <span>August–December, 2025</span>
+        </a>
+
+        <a class="album" href="gallery_vienna.html"
+           data-folder="assets/photos/gallery_vienna">
+            <img alt="">
+            <span>July, 2025: Vienna, Austria</span>
+        </a>
+
+        <a class="album" href="gallery_07_2025.html"
+           data-folder="assets/photos/gallery_07_2025">
+            <img alt="">
+            <span>May–July, 2025</span>
+        </a>
+
+        <a class="album" href="gallery_portugal.html"
+           data-folder="assets/photos/gallery_portugal">
+            <img alt="">
+            <span>January, 2025: Portugal</span>
+        </a>
+
+        <a class="album" href="gallery_morocco.html"
+           data-folder="assets/photos/gallery_morocco">
+            <img alt="">
+            <span>January, 2025: Rabat, Morocco</span>
+        </a>
+
+        <a class="album" href="gallery_01_2025.html"
+           data-folder="assets/photos/gallery_01_2025">
+            <img alt="">
+            <span>October, 2024–January, 2025</span>
+        </a>
+
+        <a class="album" href="gallery_india.html"
+           data-folder="assets/photos/gallery_india">
+            <img alt="">
+            <span>August–September 2024: India</span>
+        </a>
+    </div>
+</main>
+
+<script src="scripts/albums.js" defer></script>
+
+</body>
+</html>
